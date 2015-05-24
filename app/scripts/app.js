@@ -10,11 +10,12 @@
  */
 angular
   .module('wisePayApp', [
-    'ngAnimate',
     'ngCookies',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ngFx',
+    'ngAnimate'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -25,6 +26,14 @@ angular
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
+      })
+      .when('/pay', {
+        templateUrl: 'views/pay.html',
+        controller: 'PayCtrl'
+      })
+      .when('/services', {
+        templateUrl: 'views/services.html',
+        controller: 'ServicesCtrl'
       })
       .otherwise({
         redirectTo: '/'
