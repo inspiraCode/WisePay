@@ -15,6 +15,6 @@ angular.module('wisePayApp')
                 service: '='
             },
             replace: true,
-            link: function postLink(scope, element, attrs) {}
+            link: function postLink() {}
         };
     });

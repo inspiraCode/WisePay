@@ -51,7 +51,7 @@ angular.module('wisePayApp')
 
         this.getById = function(theId) {
             for (var i = 0; i < arrAllRecords.length; i++) {
-                if (theId == arrAllRecords[i].ID) {
+                if (theId === arrAllRecords[i].ID) {
                     return arrAllRecords[i];
                 }
             }

@@ -27,7 +27,7 @@ angular.module('wisePayApp')
         $scope.addAllServices = function() {
             for (var i = 0; i < $scope.items.length; i++) {
                 $scope.addSingleService($scope.items[i]);
-            };
+            }
         };
         $scope.addSingleService = function(theService) {
             $timeout(function() {
