@@ -14,39 +14,57 @@ angular.module('wisePayApp')
         var arrAllRecords = [{
             ID: 0,
             Name: 'Gas Natural',
-            Logo: ''
+            Logo: '',
+            ParameterName: 'GasNatural',
+            LogoURL: '../images/GNJ.png'
         }, {
             ID: 1,
             Name: 'Agua',
-            Logo: ''
+            Logo: '',
+            ParameterName: 'Agua',
+            LogoURL: ''
         }, {
             ID: 2,
             Name: 'CFE',
-            Logo: ''
+            Logo: '',
+            ParameterName: 'CFE',
+            LogoURL: ''
         }, {
             ID: 3,
             Name: 'Telmex',
-            Logo: ''
+            Logo: '',
+            ParameterName: 'Telmex',
+            LogoURL: ''
         }, {
             ID: 4,
             Name: 'Telcel',
-            Logo: ''
+            Logo: '',
+            ParameterName: 'Telcel',
+            LogoURL: ''
         }, {
             ID: 5,
             Name: 'Cablemas',
-            Logo: ''
+            Logo: '',
+            ParameterName: 'Cablemas',
+            LogoURL: ''
         }, {
             ID: 6,
             Name: 'Predial',
-            Logo: ''
+            Logo: '',
+            ParameterName: 'Predial',
+            LogoURL: ''
         }, {
             ID: 7,
             Name: 'IUSACELL',
-            Logo: ''
+            Logo: '',
+            ParameterName: 'IUSACELL',
+            LogoURL: ''
         }, {
             ID: 8,
             Name: 'SKI',
-            Logo: ''
+            Logo: '',
+            ParameterName: 'SKI',
+            LogoURL: ''
         }];
 
         this.getById = function(theId) {
@@ -56,6 +74,15 @@ angular.module('wisePayApp')
                 }
             }
             return arrAllRecords[0];
+        };
+
+        this.getByParameterName = function(theParameterName) {
+            for (var i = 0; i < arrAllRecords.length; i++) {
+                if (theParameterName === arrAllRecords[i].ParameterName) {
+                    return arrAllRecords[i];
+                }
+            }
+            return null;
         };
 
         this.getAll = function() {

@@ -8,10 +8,13 @@
  * Controller of the wisePayApp
  */
 angular.module('wisePayApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+    .controller('MainCtrl', function($scope, $location) {
+        $scope.go = function(path) {
+            if (path != $location.url()) {
+                $activityIndicator.startAnimating();
+                $timeout(function() {
+                    $location.url(path);
+                }, 100);
+            }
+        };
+    });
